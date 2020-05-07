@@ -18,9 +18,12 @@ const padrao = /((^\d)(\d\d|[a-zA-Z]{2})[2357][a-zA-Z]{1,3})(\d$)/;
 // Função para validar senha
 function validaSenha(senha, padrao) {
   const validaRegex = senha.match(padrao);
-  const validaDigito = parseInt(validaRegex[2]) === parseInt(validaRegex[4]) - 1;
-  if (validaRegex && validaDigito) {
-    return true;
+  if (validaRegex) {
+    let digitoInicial = parseInt(validaRegex[2]);
+    let digitoFinal = parseInt(validaRegex[4]);
+    if (digitoInicial === 9 && digitoFinal === 0) return true;
+    const valida = digitoInicial === (digitoFinal - 1);
+    if(valida) return true;
   }
   return false;
 }
