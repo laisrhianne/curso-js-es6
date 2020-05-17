@@ -4,8 +4,10 @@ function rand(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
+// Cria função e instancia como Promise
 function esperaAi(msg, tempo) {
     return new Promise((resolve, reject) => {
+        // Caso msg não seja string, rejeita
         if(typeof msg !== 'string') reject('valor incorreto.');
         setTimeout(() => {
             resolve(msg);
