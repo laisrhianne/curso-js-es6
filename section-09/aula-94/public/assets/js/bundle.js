@@ -98,7 +98,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modulo1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modulo1 */ "./src/modulo1.js");
 
 console.log(_modulo1__WEBPACK_IMPORTED_MODULE_0__["nome"], _modulo1__WEBPACK_IMPORTED_MODULE_0__["sobrenome"], _modulo1__WEBPACK_IMPORTED_MODULE_0__["idade"]);
-console.log(Object(_modulo1__WEBPACK_IMPORTED_MODULE_0__["soma"])(5, 5));
+console.log(Object(_modulo1__WEBPACK_IMPORTED_MODULE_0__["soma"])(20, 15));
 
 /***/ }),
 
