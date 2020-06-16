@@ -9,9 +9,9 @@ export default class Aluno extends Model {
         validate: {
           len: {
             args: [3, 255],
-            msg: 'Nome precisa ter entre 3 e 255 caracteres'
-          }
-        }
+            msg: 'Nome precisa ter entre 3 e 255 caracteres',
+          },
+        },
       },
       sobrenome: {
         type: Sequelize.STRING,
@@ -19,48 +19,48 @@ export default class Aluno extends Model {
         validate: {
           len: {
             args: [3, 255],
-            msg: 'Sobrenome precisa ter entre 3 e 255 caracteres'
-          }
-        }
+            msg: 'Sobrenome precisa ter entre 3 e 255 caracteres',
+          },
+        },
       },
       email: {
         type: Sequelize.STRING,
         defaultValue: '',
         unique: {
-          msg: 'Email já existe'
+          msg: 'Email já existe',
         },
         validate: {
           isEmail: {
-            msg: 'Email inválido'
-          }
-        }
+            msg: 'Email inválido',
+          },
+        },
       },
       idade: {
         type: Sequelize.INTEGER,
         defaultValue: '',
         validate: {
           isInt: {
-            msg: 'Idade precisa ser um número inteiro'
-          }
-        }
+            msg: 'Idade precisa ser um número inteiro',
+          },
+        },
       },
       peso: {
         type: Sequelize.FLOAT,
         defaultValue: '',
         validate: {
           isInt: {
-            msg: 'Peso precisa ser um número real'
-          }
-        }
+            msg: 'Peso precisa ser um número real',
+          },
+        },
       },
       altura: {
         type: Sequelize.FLOAT,
         defaultValue: '',
         validate: {
           isInt: {
-            msg: 'Altura precisa ser um número real'
-          }
-        }
+            msg: 'Altura precisa ser um número real',
+          },
+        },
       },
     }, {
       sequelize,
